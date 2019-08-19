@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Longest Word String</title>
+</head>
+<body>
+	<script type="text/javascript">
+  	var a=prompt("Enter the string");
+
+  	function word(str)
+{
+  var array1 = str.match(/\w[a-z]{0,}/gi);
+  var result = [];
+
+  for(var x = 0 ; x < array1.length ; x++)
+  {
+    if(result.length < array1[x].length)
+    {
+    result = array1[x];
+    } 
+  }
+  return result;
+}
+var b=word(a);
+document.write("Longest String: " +b);
+
+</script>
+</body>
+</html>
